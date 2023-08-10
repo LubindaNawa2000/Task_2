@@ -1,0 +1,35 @@
+﻿ @model Task_2.Models.ImageInfo // <!-- Specify the model type -->
+
+@{
+    ViewData["Title"] = "Random Images";
+}
+
+
+
+<div class="row mt-5">
+    <div class="col mx-auto">
+        <h1 class="display-4">Quiz</h1>
+        
+        <button id="toggleButton">Toggle Content</button>
+        
+        <div id="hiddenContent" class="hidden-content">
+            <form id="quizForm" action="" method="get">
+                <div class="imgContainer">
+                    <img src="@Model.Link" alt="image" class="fade-image" />
+                    <span>A</span> <input type="radio" name="ans @Model.id" id="" value="A">
+                    <span>B</span><input type="radio" name="ans @Model.id" id="" value="B">
+                    <span>C</span><input type="radio" name="ans @Model.id" id="" value="C">
+                    <span>D</span><input type="radio" name="ans @Model.id" id="" value="D">
+                </div>
+                <br>
+                <div class="container-fluid">
+                    <button id="prevButton" class="btn btn-secondary">Previous</button>
+                    <button id="nextButton" class="btn btn-secondary">Next</button>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
